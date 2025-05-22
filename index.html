@@ -1,11 +1,136 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello World</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Irem Arici</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    img.profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #0077cc;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #0077cc;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    ul.projects {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.projects li {
+      margin-bottom: 15px;
+    }
+
+    ul.projects li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    ul.projects li a:hover {
+      text-decoration: underline;
+    }
+
+    .cv-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .cv-button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Profile Photo -->
+  <img class="profile" src="profile.jpg" alt="Irem Arici Photo" />
+
+  <!-- Header Info -->
+  <h1>Irem Arici</h1>
+  <p>PhD Candidate in Computer Science | Affective Computing | Cognitive Science</p>
+  <p>Welcome to my academic and professional homepage.</p>
+
+  <!-- Links -->
+  <div class="links">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+    <a href="mailto:youremail@example.com">Email</a>
+  </div>
+
+  <!-- CV Link -->
+  <a class="cv-button" href="CV.pdf" target="_blank">View My CV</a>
+
+  <!-- Projects Section -->
+  <div class="section">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li>
+        <a href="https://github.com/yourusername/emotion-modeling">Emotion Modeling with Deep Learning</a>
+        <p>A study on computational models for recognizing and representing human emotions using LSTM networks.</p>
+      </li>
+      <li>
+        <a href="https://github.com/yourusername/visual-gestalt-net">Visual Perception in Neural Networks</a>
+        <p>Comparative study of Gestalt principle recognition in humans and convolutional networks.</p>
+      </li>
+      <!-- Add more projects as needed -->
+    </ul>
+  </div>
+
+</body>
 </html>
