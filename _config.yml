@@ -1,2 +1,28 @@
 title: Irem Arici
+email: icirameri@gmail.com
+description: > 
+  Researcher in affective computing and visual attention models. Portfolio and projects.
+baseurl: "" 
+url: "https://iarici.github.io"  
+# Build settings
+markdown: kramdown
 theme: no-style-please
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation links (edit _data/navigation.yml for menu)
+# You can keep this empty here or configure menus in _data/navigation.yml
+
+# Author info for footer, etc.
+author:
+  name: Irem Arici
+  email: your.email@example.com
+  github: iarici
+  linkedin: ariciirem
+
+# Optional social links (edit _data/navigation.yml to link these)
+social_links:
+  github: "https://github.com/yourusername"
+  linkedin: "https://linkedin.com/in/yourlinkedin"
+  email: "mailto:your.email@example.com"
