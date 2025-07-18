@@ -6,7 +6,7 @@ baseurl: ""
 url: "https://iarici.github.io"  
 # Build settings
 markdown: kramdown
-theme: no-style-please
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
