@@ -3,87 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal website of Irem Arici, PhD student in Computer Science at University of Genoa, researching affective computing and visual attention." />
-  <title>Irem Arici</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Irem Arici - PhD student in Computer Science at University of Genoa. Researching affective computing and visual attention." />
+  <title>Irem Arici | Research</title>
+  
+  <!-- Modern Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --card-bg: rgba(255, 255, 255, 0.8);
+    }
+
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #ffffff;
-      color: #111;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      background-image: radial-gradient(circle at 2px 2px, #e2e8f0 1px, transparent 0);
+      background-size: 40px 40px; /* Subtle grid background */
+      color: var(--text);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px); /* Glassmorphism */
+      padding: 3rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.5);
       text-align: center;
-      padding: 40px 20px;
     }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.025em;
+      background: linear-gradient(to right, #1e293b, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    p {
-      font-size: 1.15rem;
-      max-width: 650px;
-      margin: 0.5rem 0;
-      line-height: 1.6;
-    }
-    .links {
-      margin-top: 2.5rem;
-    }
-    .links a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #0077cc;
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--primary);
       font-weight: 600;
+      margin-bottom: 1.5rem;
     }
-    .links a:hover {
-      text-decoration: underline;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
     }
+
     .btn-group {
-      margin-top: 2.5rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      gap: 12px;
       justify-content: center;
+      margin: 2rem 0;
     }
+
     .btn {
-      padding: 12px 24px;
-      background: #0077cc;
+      padding: 12px 28px;
+      background: var(--primary);
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background 0.3s ease;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
     }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
     .btn:hover {
-      background: #005fa3;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 2rem;
+      margin-top: 1rem;
+    }
+
+    .links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .links a:hover {
+      color: var(--primary);
+    }
+
+    .links i {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .btn-group { flex-direction: column; }
+      .container { padding: 1.5rem; }
+      h1 { font-size: 2.2rem; }
     }
   </style>
-</head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
 <body>
-  <h1>Hi, I’m Irem!</h1>
-  <p>I do research on affective computing and visual attention models.</p>
-  <p>This site is mostly about my projects, studies, and works.</p>
-  <p>Currently a PhD student in Computer Science at the University of Genoa.</p>
 
-  <div class="btn-group">
-    <a href="projects.html" class="btn">See my projects</a>
-    <a href="papers.html" class="btn">See my published work</a>
+  <div class="container">
+    <h1>Irem Arici</h1>
+    <div class="subtitle">PhD Researcher @ University of Genoa</div>
+    
+    <p>
+      Exploring the intersection of <strong>affective computing</strong> and 
+      <strong>visual attention models</strong>. My research focuses on how machines can 
+      interpret human emotion and focus in complex visual environments.
+    </p>
+
+    <div class="btn-group">
+      <a href="projects.html" class="btn">View Projects</a>
+      <a href="papers.html" class="btn btn-outline">Publications</a>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/iarici" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/ariciirem" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=77JmMs0AAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
+      <a href="mailto:irem.arici@edu.unige.it"><i class="fa-solid fa-envelope"></i> Email</a>
+    </div>
   </div>
 
-  <div class="links">
-    <a href="https://github.com/iarici" target="_blank" rel="noopener noreferrer">
-      <i class="fa-brands fa-github"></i>GitHub</a>
-    <a href="https://linkedin.com/in/ariciirem" target="_blank" rel="noopener noreferrer">
-      <i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-    <a href="https://scholar.google.com/citations?user=77JmMs0AAAAJ&hl=en&oi=ao target="_blank" rel="noopener noreferrer">
-      <i class="fa-brands fa-google-scholar"></i>Google Scholar</a>
-    <a href="mailto:irem.arici@edu.unige.it.com">
-      <i class="fa-solid fa-envelope"></i> Email
-  </a>
-  </div>
 </body>
 </html>
