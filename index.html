@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Irem Arici - PhD student in Computer Science at University of Genoa. Researching affective computing and visual attention." />
-  <title>Irem Arici | Research</title>
+  <title>Irem Arici | PhD Researcher</title>
   
-  <!-- Modern Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -15,153 +13,189 @@
   <style>
     :root {
       --primary: #2563eb;
-      --primary-hover: #1d4ed8;
       --bg: #f8fafc;
       --text: #1e293b;
       --text-light: #64748b;
-      --card-bg: rgba(255, 255, 255, 0.8);
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
-      background-image: radial-gradient(circle at 2px 2px, #e2e8f0 1px, transparent 0);
-      background-size: 40px 40px; /* Subtle grid background */
       color: var(--text);
       display: flex;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
-      padding: 20px;
     }
 
-    .container {
-      max-width: 800px;
-      background: var(--card-bg);
-      backdrop-filter: blur(10px); /* Glassmorphism */
-      padding: 3rem;
-      border-radius: 24px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      text-align: center;
+    /* Main Grid Wrapper */
+    .site-wrapper {
+      display: grid;
+      grid-template-columns: 350px 1fr; /* Fixed sidebar, flexible content */
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    h1 {
-      font-size: 3rem;
+    /* LEFT SIDEBAR */
+    aside {
+      background: #ffffff;
+      padding: 60px 40px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      border-right: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile-info h1 {
+      font-size: 2.2rem;
       font-weight: 800;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.025em;
-      background: linear-gradient(to right, #1e293b, #2563eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      margin: 0;
+      letter-spacing: -1px;
     }
 
-    .subtitle {
-      font-size: 1.25rem;
+    .profile-info .title {
       color: var(--primary);
       font-weight: 600;
-      margin-bottom: 1.5rem;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover { color: var(--primary); }
+
+    /* RIGHT CONTENT AREA */
+    main {
+      padding: 80px 60px;
+      background: var(--bg);
+    }
+
+    section {
+      max-width: 700px;
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-light);
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--text-light);
-      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      color: #475569;
     }
 
-    .btn-group {
+    .nav-buttons {
       display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin: 2rem 0;
+      gap: 15px;
+      margin-top: 30px;
     }
 
     .btn {
-      padding: 12px 28px;
+      padding: 12px 24px;
       background: var(--primary);
       color: white;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 8px;
       font-weight: 600;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
     }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--primary);
-      border: 2px solid var(--primary);
-    }
+    .btn:hover { opacity: 0.9; }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
-    }
-
-    .btn-outline:hover {
-      background: var(--primary);
-      color: white;
-    }
-
-    .links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      border-top: 1px solid #e2e8f0;
-      padding-top: 2rem;
-      margin-top: 1rem;
-    }
-
-    .links a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.2s;
-    }
-
-    .links a:hover {
-      color: var(--primary);
-    }
-
-    .links i {
-      font-size: 1.2rem;
-    }
-
-    @media (max-width: 600px) {
-      .btn-group { flex-direction: column; }
-      .container { padding: 1.5rem; }
-      h1 { font-size: 2.2rem; }
+    /* MOBILE VIEW */
+    @media (max-width: 900px) {
+      .site-wrapper {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+      }
+      aside {
+        height: auto;
+        position: relative;
+        padding: 40px 20px;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      main { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Irem Arici</h1>
-    <div class="subtitle">PhD Researcher @ University of Genoa</div>
-    
-    <p>
-      Exploring the intersection of <strong>affective computing</strong> and 
-      <strong>visual attention models</strong>. My research focuses on how machines can 
-      interpret human emotion and focus in complex visual environments.
-    </p>
+  <div class="site-wrapper">
+    <!-- LEFT COLUMN -->
+    <aside>
+      <div class="profile-info">
+        <h1>Irem Arici</h1>
+        <span class="title">PhD Student @ UniGE</span>
+        
+        <nav class="social-links">
+          <a href="https://github.com/iarici" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/ariciirem" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=77JmMs0AAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+          <!-- <a href="mailto:irem.arici@edu.unige.it"><i class="fa-solid fa-envelope"></i> Email</a> -->
+        </nav>
+      </div>
 
-    <div class="btn-group">
-      <a href="projects.html" class="btn">View Projects</a>
-      <a href="papers.html" class="btn btn-outline">Publications</a>
-    </div>
+      <footer style="font-size: 0.8rem; color: var(--text-light);">
+        &copy; 2026 Irem Arici
+      </footer>
+    </aside>
 
-    <div class="links">
-      <a href="https://github.com/iarici" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-      <a href="https://linkedin.com/in/ariciirem" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=77JmMs0AAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
-      <a href="mailto:irem.arici@edu.unige.it"><i class="fa-solid fa-envelope"></i> Email</a>
-    </div>
+    <!-- RIGHT COLUMN -->
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a PhD student in Computer Science at the <strong>University of Genoa</strong>. 
+          My research lives at the intersection of <strong>affective computing</strong> 
+          and <strong>visual attention models</strong>.
+        </p>
+        <p>
+          Currently, I am exploring how computational models can better recognize human 
+          emotions and intent through visual cues, aiming to bridge the gap between 
+          human psychology and machine intelligence.
+        </p>
+        <p>
+          Reach out by sending an email to irem.arici [at] edu.unige.it
+        </p>
+        
+        <div class="nav-buttons">
+          <a href="projects.html" class="btn">Explore Projects</a>
+          <a href="papers.html" class="btn">View Publications</a>
+        </div>
+      </section>
+
+      <section id="news">
+        <h2>Latest Updates</h2>
+        <p style="font-size: 0.95rem;">
+          <!-- • <strong>May 2026:</strong> Redesigning my personal website for a cleaner look!<br>
+          • <strong>Feb 2026:</strong> Presented a new talk on Bayesian emotional inference. -->
+        </p>
+      </section>
+    </main>
   </div>
 
 </body>
